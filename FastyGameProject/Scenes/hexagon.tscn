@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://datl4s6wn0j37"]
+
+[ext_resource type="Script" path="res://Scripts/cube.gd" id="1_r67gq"]
+[ext_resource type="Texture2D" uid="uid://bdh4rxcax46u0" path="res://Sprites/hexagon.png" id="2_uw575"]
+
+[node name="hexagon" type="CharacterBody2D"]
+scale = Vector2(0.05, 0.05)
+input_pickable = true
+script = ExtResource("1_r67gq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4.375, 4.375)
+texture = ExtResource("2_uw575")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 160)
+polygon = PackedVector2Array(-640, -1120, 640, -1120, 1120, -160, 640, 800, -640, 800, -1120, -160)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

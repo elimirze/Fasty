@@ -1,0 +1,164 @@
+[gd_scene load_steps=9 format=3 uid="uid://hvap03hujypo"]
+
+[ext_resource type="Texture2D" uid="uid://ccaaq5g4f4vv6" path="res://Sprites/Background.png" id="1_kssmi"]
+[ext_resource type="FontVariation" uid="uid://buu8kqux736gm" path="res://Fonts/Game_Font.tres" id="2_jdscv"]
+[ext_resource type="Script" path="res://Scripts/PlayDifficulty.gd" id="2_tt7qq"]
+[ext_resource type="FontVariation" uid="uid://b5wirw5h8bo8n" path="res://Fonts/Score_Font.tres" id="3_vxt7h"]
+[ext_resource type="Texture2D" uid="uid://4fn6pnqai664" path="res://Sprites/play.png" id="4_6xkgr"]
+[ext_resource type="AudioStream" uid="uid://c86ywhoqukjni" path="res://BGM/music_zapsplat_astro_race.mp3" id="6_8ntam"]
+[ext_resource type="StyleBox" uid="uid://dpnup4bx50wav" path="res://Styles/Default.tres" id="6_hqxbn"]
+[ext_resource type="Texture2D" uid="uid://tl3e17s5s7cc" path="res://Sprites/arrow.png" id="6_tffod"]
+
+[node name="Adjustments" type="TextureRect"]
+modulate = Color(0.133333, 0.67451, 0.890196, 1)
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_kssmi")
+expand_mode = 2
+script = ExtResource("2_tt7qq")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Game Over" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(100, 100, 100, 1)
+theme_override_colors/font_outline_color = Color(0.588235, 0.588235, 0.588235, 1)
+theme_override_fonts/font = ExtResource("2_jdscv")
+theme_override_font_sizes/font_size = 60
+text = "Set Your Difficulty"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MaxTime" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MaxTime"]
+layout_mode = 2
+theme_override_colors/font_color = Color(100, 100, 100, 1)
+theme_override_fonts/font = ExtResource("3_vxt7h")
+theme_override_font_sizes/font_size = 30
+text = "Adjust Max Time"
+vertical_alignment = 1
+
+[node name="MaxTime" type="HSlider" parent="MarginContainer/VBoxContainer/MaxTime"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 1.0
+max_value = 20.0
+value = 1.0
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MaxTime"]
+layout_mode = 2
+theme_override_colors/font_color = Color(100, 100, 100, 1)
+theme_override_fonts/font = ExtResource("3_vxt7h")
+theme_override_font_sizes/font_size = 30
+vertical_alignment = 1
+
+[node name="Speed" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Speed"]
+layout_mode = 2
+theme_override_colors/font_color = Color(100, 100, 100, 1)
+theme_override_fonts/font = ExtResource("3_vxt7h")
+theme_override_font_sizes/font_size = 30
+text = "Adjust Speed of Game"
+vertical_alignment = 1
+
+[node name="Speed" type="HSlider" parent="MarginContainer/VBoxContainer/Speed"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 1.0
+max_value = 3.0
+step = 0.5
+value = 1.0
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Speed"]
+layout_mode = 2
+theme_override_colors/font_color = Color(100, 100, 100, 1)
+theme_override_fonts/font = ExtResource("3_vxt7h")
+theme_override_font_sizes/font_size = 30
+vertical_alignment = 1
+
+[node name="SpeedRate" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/SpeedRate"]
+layout_mode = 2
+theme_override_colors/font_color = Color(100, 100, 100, 1)
+theme_override_fonts/font = ExtResource("3_vxt7h")
+theme_override_font_sizes/font_size = 30
+text = "Adjust Speed Rate"
+vertical_alignment = 1
+
+[node name="SpeedRate" type="HSlider" parent="MarginContainer/VBoxContainer/SpeedRate"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 0.05
+max_value = 1.0
+step = 0.05
+value = 0.05
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/SpeedRate"]
+layout_mode = 2
+theme_override_colors/font_color = Color(100, 100, 100, 1)
+theme_override_fonts/font = ExtResource("3_vxt7h")
+theme_override_font_sizes/font_size = 30
+vertical_alignment = 1
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+icon = ExtResource("4_6xkgr")
+flat = true
+expand_icon = true
+
+[node name="Back" type="Button" parent="MarginContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/normal = ExtResource("6_hqxbn")
+theme_override_styles/hover = ExtResource("6_hqxbn")
+theme_override_styles/pressed = ExtResource("6_hqxbn")
+theme_override_styles/disabled = ExtResource("6_hqxbn")
+theme_override_styles/focus = ExtResource("6_hqxbn")
+icon = ExtResource("6_tffod")
+flat = true
+expand_icon = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_8ntam")
+autoplay = true
+
+[connection signal="button_down" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_button_down"]
+[connection signal="pressed" from="MarginContainer/Back" to="." method="_on_back_pressed"]

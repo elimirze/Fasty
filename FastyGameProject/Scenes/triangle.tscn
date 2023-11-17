@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhnsn4ieuoabr"]
+
+[ext_resource type="Script" path="res://Scripts/cube.gd" id="1_nknch"]
+[ext_resource type="Texture2D" uid="uid://53plfeo1ghh4" path="res://Sprites/Triangle.png" id="2_6fh0m"]
+
+[node name="triangle" type="CharacterBody2D"]
+scale = Vector2(0.05, 0.05)
+input_pickable = true
+script = ExtResource("1_nknch")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4.375, 4.375)
+texture = ExtResource("2_6fh0m")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 160)
+polygon = PackedVector2Array(1280, 800, 0, -1280, -1280, 800)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://mdnh5iu5o5f2"]
+
+[ext_resource type="Script" path="res://Scripts/cube.gd" id="1_xholl"]
+[ext_resource type="Texture2D" uid="uid://bmjkdw5ntxt7d" path="res://Sprites/cloud.png" id="2_gq7in"]
+
+[node name="cloud" type="CharacterBody2D"]
+scale = Vector2(0.05, 0.05)
+input_pickable = true
+script = ExtResource("1_xholl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4.375, 4.375)
+texture = ExtResource("2_gq7in")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 160)
+polygon = PackedVector2Array(-480, -800, 0, -800, 160, -640, 320, -640, 640, -640, 800, -320, 1120, -160, 1120, 320, 800, 480, -960, 480, -1120, 160, -1120, 0, -800, -320)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

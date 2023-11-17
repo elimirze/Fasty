@@ -1,0 +1,11 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://buu8kqux736gm"]
+
+[ext_resource type="FontFile" uid="uid://8v2c17s7ar2h" path="res://Fonts/Skranji.ttf" id="1_xid3t"]
+
+[resource]
+base_font = ExtResource("1_xid3t")
+variation_opentype = {
+1129468758: null,
+1397248592: null,
+1936486004: null
+}

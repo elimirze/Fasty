@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bex2epu4sslrx"]
+
+[ext_resource type="Script" path="res://Scripts/cube.gd" id="1_jpdhv"]
+[ext_resource type="Texture2D" uid="uid://ncna62kg6bcv" path="res://Sprites/pentagon.png" id="2_ejq8f"]
+
+[node name="pentagon" type="CharacterBody2D"]
+scale = Vector2(0.05, 0.05)
+input_pickable = true
+script = ExtResource("1_jpdhv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4.375, 4.375)
+texture = ExtResource("2_ejq8f")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 160)
+polygon = PackedVector2Array(-640, 800, 640, 800, 640, 800, 960, -320, 0, -1120, -960, -320)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

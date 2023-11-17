@@ -1,0 +1,11 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://b5wirw5h8bo8n"]
+
+[ext_resource type="FontFile" uid="uid://vtqkeyoyc3wa" path="res://Fonts/Geologica.ttf" id="1_gc3un"]
+
+[resource]
+base_font = ExtResource("1_gc3un")
+variation_opentype = {
+1129468758: null,
+1397248592: null,
+1936486004: null
+}

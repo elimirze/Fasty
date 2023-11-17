@@ -1,0 +1,45 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://8v2c17s7ar2h"
+path="res://.godot/imported/Skranji.ttf-a46b501d97defcdd5d903931c13e3f48.fontdata"
+
+[deps]
+
+source_file="res://Fonts/Skranji.ttf"
+dest_files=["res://.godot/imported/Skranji.ttf-a46b501d97defcdd5d903931c13e3f48.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "60px",
+"size": Vector2i(60, 0),
+"variation_embolden": 0.0
+}, {
+"chars": [],
+"glyphs": [],
+"name": "90px",
+"size": Vector2i(90, 0),
+"variation_embolden": 0.0
+}]
+language_support={}
+script_support={}
+opentype_features={}

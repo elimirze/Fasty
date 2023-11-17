@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bube2wo30msga"]
+
+[ext_resource type="Script" path="res://Scripts/cube.gd" id="1_ni4o1"]
+[ext_resource type="Texture2D" uid="uid://dqx65r265i78j" path="res://Sprites/square.png" id="2_u8qaa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6py8"]
+size = Vector2(2240, 2240)
+
+[node name="Cube" type="CharacterBody2D"]
+scale = Vector2(0.05, 0.05)
+input_pickable = true
+script = ExtResource("1_ni4o1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-6.10352e-05, -3.05176e-05)
+scale = Vector2(4.375, 4.375)
+texture = ExtResource("2_u8qaa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6.67572e-05, -4.76837e-06)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_o6py8")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
