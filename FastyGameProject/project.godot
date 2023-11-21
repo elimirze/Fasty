@@ -13,7 +13,10 @@ config_version=5
 config/name="Fasty"
 run/main_scene="res://Scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://Sprites/MyLogo.png"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=1000
 
 [autoload]
 
@@ -22,11 +25,9 @@ Global="*res://Scripts/global.gd"
 [filesystem]
 
 import/blender/enabled=false
-
-[input_devices]
-
-pointing/emulate_mouse_from_touch=false
+import/fbx/enabled=false
 
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

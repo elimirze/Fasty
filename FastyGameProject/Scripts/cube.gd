@@ -13,7 +13,7 @@ func _process(delta):
 
 
 func _on_input_event(_viewport, event, _shape_idx):
-	if event is InputEventScreenTouch or event is InputEventMouseButton:
+	if event is InputEventMouseButton:
 		var objects=get_tree().get_nodes_in_group("game")
 		objects[0].speedifier+=objects[0].speed_rate
 		objects[0].total_score+=int(objects[0].score*(objects[0].time/objects[0].max_time))
