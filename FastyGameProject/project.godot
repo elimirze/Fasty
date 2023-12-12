@@ -22,6 +22,10 @@ boot_splash/minimum_display_time=1000
 
 Global="*res://Scripts/global.gd"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/admob/plugin.cfg")
+
 [filesystem]
 
 import/blender/enabled=false
