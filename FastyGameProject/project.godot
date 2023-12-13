@@ -22,9 +22,11 @@ boot_splash/minimum_display_time=1000
 
 Global="*res://Scripts/global.gd"
 
-[editor_plugins]
+[display]
 
-enabled=PackedStringArray("res://addons/admob/plugin.cfg")
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
 
 [filesystem]
 
