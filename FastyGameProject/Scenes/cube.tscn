@@ -7,6 +7,7 @@
 size = Vector2(2240, 2240)
 
 [node name="Cube" type="CharacterBody2D"]
+texture_filter = 1
 scale = Vector2(0.05, 0.05)
 input_pickable = true
 script = ExtResource("1_ni4o1")
@@ -18,7 +19,6 @@ texture = ExtResource("2_u8qaa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-6.67572e-05, -4.76837e-06)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_o6py8")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

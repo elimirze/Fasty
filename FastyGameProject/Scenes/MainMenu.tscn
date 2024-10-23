@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://6h8h8v0ce2ss"]
+[gd_scene load_steps=9 format=3 uid="uid://6h8h8v0ce2ss"]
 
 [ext_resource type="Texture2D" uid="uid://ccaaq5g4f4vv6" path="res://Sprites/Background.png" id="1_dcd05"]
 [ext_resource type="FontVariation" uid="uid://buu8kqux736gm" path="res://Fonts/Game_Font.tres" id="2_twseb"]
@@ -8,7 +8,6 @@
 [ext_resource type="FontVariation" uid="uid://b5wirw5h8bo8n" path="res://Fonts/Score_Font.tres" id="6_ii00f"]
 [ext_resource type="AudioStream" uid="uid://c86ywhoqukjni" path="res://BGM/music_zapsplat_astro_race.mp3" id="6_ukjnh"]
 [ext_resource type="Texture2D" uid="uid://dfl823806nh3s" path="res://Sprites/music on.png" id="8_8f2hm"]
-[ext_resource type="Script" path="res://addons/admob/admob.gd" id="9_cggo7"]
 
 [node name="MainMenu" type="TextureRect"]
 modulate = Color(0.133333, 0.67451, 0.890196, 1)
@@ -79,7 +78,6 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
-visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_ii00f")
@@ -103,10 +101,6 @@ expand_icon = true
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_ukjnh")
 autoplay = true
-
-[node name="Admob" type="Node" parent="."]
-script = ExtResource("9_cggo7")
-banner_id = "ca-app-pub-7595517533314515/4565274115"
 
 [connection signal="button_down" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_button_down"]
 [connection signal="toggled" from="MarginContainer/HBoxContainer/CheckBox" to="MarginContainer/VBoxContainer/Play" method="_on_check_box_toggled"]

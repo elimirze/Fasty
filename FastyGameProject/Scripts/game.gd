@@ -38,10 +38,10 @@ func _process(delta):
 			gameobject.modulate=Color(randf_range(0,1),randf_range(0,1),randf_range(0,1),1)
 			while gameobject.dir==0:
 				gameobject.dir=randi_range(-1,1)
-			var rand_scale=randf_range(0.02,0.1)
+			var rand_scale=randf_range(0.05,0.1)
 			gameobject.scale=Vector2(rand_scale,rand_scale)
 			gameobject.speed=randf_range(50,300)
-			var offset=512*gameobject.scale/2
+			var offset=512*gameobject.scale
 			var clamp_left=$Camera2D.position.x-get_viewport_rect().size.x/2+offset.x
 			var clamp_right=$Camera2D.position.x+get_viewport_rect().size.x/2-offset.x
 			var clamp_up=$Camera2D.position.y-get_viewport_rect().size.y/2+offset.y
